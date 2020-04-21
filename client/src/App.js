@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/App.css';
+import DashBoard from './components/Dashboard';
+class App extends React.Component{
 
-function App() {
-  return (
+  constructor(props){
+    super(props)
+    this.state = {
+      tweets: [],
+      isLoaded:  false,
+    }
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:5000/sentiment/rona')
+      .then(res => res.json())
+      .then(data => {
+          this.setState({
+            tweets: data,
+            isLoaded: true
+          })
+          console.log(this.state.tweets)
+        
+      })
+  }
+
+  render (){
+    
+    return(
+      <div><DashBoard></DashBoard></div>
+      //
+      /*
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label>Search</label>
+      
+      <ul>
+        {this.state.tweets.map(tweet=>
+          <li key = {tweet.id}>
+            {tweet.text}
+            <br/>
+          </li>
+        )}
+      </ul>
     </div>
-  );
+    */
+  )
+  }
 }
 
-export default App;
+export default App
