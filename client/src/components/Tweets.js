@@ -4,8 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Title from "./Title";
 import TwitterIcon from "../assets/images/twitterIcon.png";
 
-const tweets = ["Item 1", "Item 2", "Item 3", "Item 4"];
-
 function preventDefault(event) {
   event.preventDefault();
 }
