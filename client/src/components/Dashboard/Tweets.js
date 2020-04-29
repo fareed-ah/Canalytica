@@ -2,7 +2,7 @@ import React from "react";
 import { List, Divider, Link, ListItem, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Title from "./Title";
-import TwitterIcon from "../assets/images/twitterIcon.png";
+import TwitterIcon from "../../assets/images/twitterIcon.png";
 
 function preventDefault(event) {
   event.preventDefault();
