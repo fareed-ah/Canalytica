@@ -1,6 +1,6 @@
 import React from "react";
 import "./assets/css/App.css";
-import DashBoard from "./components/Dashboard";
+import DashBoard from "./Dashboard/Dashboard";
 
 class App extends React.Component {
   componentDidMount() {}
