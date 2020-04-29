@@ -1,50 +1,17 @@
-import React from 'react';
-import './assets/css/App.css';
-import DashBoard from './components/Dashboard';
-class App extends React.Component{
+import React from "react";
+import "./assets/css/App.css";
+import DashBoard from "./components/Dashboard";
 
-  constructor(props){
-    super(props)
-    this.state = {
-      tweets: [],
-      isLoaded:  false,
-    }
-  }
+class App extends React.Component {
+  componentDidMount() {}
 
-  componentDidMount(){
-    fetch('http://localhost:5000/sentiment/rona')
-      .then(res => res.json())
-      .then(data => {
-          this.setState({
-            tweets: data,
-            isLoaded: true
-          })
-          console.log(this.state.tweets)
-        
-      })
-  }
-
-  render (){
-    
-    return(
-      <div><DashBoard></DashBoard></div>
-      //
-      /*
-    <div className="App">
-      <label>Search</label>
-      
-      <ul>
-        {this.state.tweets.map(tweet=>
-          <li key = {tweet.id}>
-            {tweet.text}
-            <br/>
-          </li>
-        )}
-      </ul>
-    </div>
-    */
-  )
+  render() {
+    return (
+      <div>
+        <DashBoard></DashBoard>
+      </div>
+    );
   }
 }
 
-export default App
+export default App;
