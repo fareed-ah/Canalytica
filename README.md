@@ -10,7 +10,7 @@ npm i
 ```
 3) Run the same command in the server folder
 
-# Run the Project
+# Running the Project
 1) In the client folder run the following command
 ```bash
 npm start
