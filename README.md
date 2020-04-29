@@ -8,10 +8,20 @@ Canalytica is a platform focused on social media analysis. It allows you to moni
 ```bash
 npm i
 ```
-3) Navigate to client folder and run the command
+3) Run the same command in the server folder
+
+# Run the Project
+1) In the client folder run the following command
 ```bash
-npm i
+npm start
 ```
+You should see the homepagee open at http://localhost:3000/
+
+2)In the server folder run the following commend
+```bash
+nodemon index.js
+```
+
 # Languages
 
 The platform is built using React as the front end framework. The React application communicates with a Node application that is built using Express. The node server executes the client request in a python script that performs sentinement analysis using NLTK. 
