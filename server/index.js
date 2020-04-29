@@ -59,7 +59,7 @@ function getTweets(req, res) {
   return new Promise((resolve, reject) => {
     // spawn new child process to call the python script
     console.log(req.params.hashtag);
-    const process = spawn("python3", ["../twitterAPI.py", req.params.hashtag]);
+    const process = spawn("python3", ["./twitterAPI.py", req.params.hashtag]);
 
     var dataToSend = "";
     // collect data from script
